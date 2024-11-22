@@ -1,16 +1,16 @@
 pipeline {
   agent any
-  stages{
+  stages {
     stage('Build') {
       steps {
-        sh """
+        bat """
           mvn package
         """
       }
     }
-    stage('Test'){
-      steps{
-        sh """
+    stage('Test') {
+      steps {
+        bat """
           mvn test
         """
       }
